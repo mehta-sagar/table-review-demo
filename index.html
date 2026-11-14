@@ -2684,9 +2684,11 @@ var qrcode = function() {
 // ───── Prototype settings ─────
 const NAME = 'Demo Bistro';
 const GOOGLE_PLACE_ID = 'ChIJr5KATc5N4DsRwcHIJzCpxns';  // paste the restaurant's Place ID here to open the "Write a review" box directly
-// Opens Google's "Write a review" pop-up card on top of Aiko's Google listing.
-// Fallback if it ever stops working: 'https://search.google.com/local/writereview?placeid=' + GOOGLE_PLACE_ID
-const GOOGLE_URL = 'https://www.google.com/search?q=Aiko+Pan-Asian+Restaurant+Pal+Surat#lrd=0x3be04dce4d8092af:0x7bc6a93027c8c1c1,3,,,,';
+// Best: the owner's official short link from Google Business Profile → "Ask for reviews" (looks like https://g.page/r/XXXX/review).
+// It opens the Google Maps app's Write-a-review card directly. Paste it here when the owner shares it.
+const GPAGE_REVIEW_URL = '';
+// Until then: Google's official write-review link for Aiko (Place ID).
+const GOOGLE_URL = GPAGE_REVIEW_URL || 'https://search.google.com/local/writereview?placeid=ChIJr5KATc5N4DsRwcHIJzCpxns&hl=en';
 // Sample dishes for the WhatsApp-bill demo (replace with the restaurant's real menu)
 const BILL = { name: 'Rahul', items: ['Veg Dimsum Basket', 'Wonton Soup', 'Mushroom Fried Rice', 'Sushi Platter'] };
 // In the live system an AI (Gemini / Claude Haiku) checks sarcasm. This prototype uses a few sample phrases instead.
