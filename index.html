@@ -2684,7 +2684,9 @@ var qrcode = function() {
 // ───── Prototype settings ─────
 const NAME = 'Demo Bistro';
 const GOOGLE_PLACE_ID = 'ChIJr5KATc5N4DsRwcHIJzCpxns';  // paste the restaurant's Place ID here to open the "Write a review" box directly
-const GOOGLE_URL = GOOGLE_PLACE_ID ? 'https://search.google.com/local/writereview?placeid=' + encodeURIComponent(GOOGLE_PLACE_ID) : 'https://www.google.com/maps/place/Aiko/@21.1820087,72.7745012,17z/data=!3m1!4b1!4m6!3m5!1s0x3be04dce4d8092af:0x7bc6a93027c8c1c1!8m2!3d21.1820037!4d72.7770761!16s%2Fg%2F11rvgf3s8y?entry=ttu&g_ep=EgoyMDI2MTExMC4wIKXMDSoASAFQAw%3D%3D';
+// Opens Google's "Write a review" pop-up card on top of Aiko's Google listing.
+// Fallback if it ever stops working: 'https://search.google.com/local/writereview?placeid=' + GOOGLE_PLACE_ID
+const GOOGLE_URL = 'https://www.google.com/search?q=Aiko+Pan-Asian+Restaurant+Pal+Surat#lrd=0x3be04dce4d8092af:0x7bc6a93027c8c1c1,3,,,,';
 // Sample dishes for the WhatsApp-bill demo (replace with the restaurant's real menu)
 const BILL = { name: 'Rahul', items: ['Veg Dimsum Basket', 'Wonton Soup', 'Mushroom Fried Rice', 'Sushi Platter'] };
 // In the live system an AI (Gemini / Claude Haiku) checks sarcasm. This prototype uses a few sample phrases instead.
