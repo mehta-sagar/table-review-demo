@@ -201,7 +201,7 @@ blockquote{margin:0 0 14px;background:var(--card);border-left:3px solid var(--ac
     <div class="receipt">
      <div class="tick"><svg viewBox="0 0 52 52"><circle cx="26" cy="26" r="24"/><path d="M15 27l7 7 15-16"/></svg></div>
      <h3>Review copied</h3>
-     <p class="rs">Aiko’s Google Maps page opened in a new tab. In the live version it opens the restaurant’s own “Write a review” box, and the guest long-presses, taps Paste, then Post.</p>
+     <p class="rs">Google’s “Write a review” box opened in a new tab. The guest long-presses the text box, taps Paste, then Post.</p>
      <blockquote id="gText"></blockquote>
      <button class="ghost" id="reopen">Open Google again ↗</button>
      <button class="ghost" data-again>↺ Rate again</button>
@@ -2683,7 +2683,7 @@ var qrcode = function() {
 <script>
 // ───── Prototype settings ─────
 const NAME = 'Demo Bistro';
-const GOOGLE_PLACE_ID = '';  // paste the restaurant's Place ID here to open the "Write a review" box directly
+const GOOGLE_PLACE_ID = 'ChIJr5KATc5N4DsRwcHIJzCpxns';  // paste the restaurant's Place ID here to open the "Write a review" box directly
 const GOOGLE_URL = GOOGLE_PLACE_ID ? 'https://search.google.com/local/writereview?placeid=' + encodeURIComponent(GOOGLE_PLACE_ID) : 'https://www.google.com/maps/place/Aiko/@21.1820087,72.7745012,17z/data=!3m1!4b1!4m6!3m5!1s0x3be04dce4d8092af:0x7bc6a93027c8c1c1!8m2!3d21.1820037!4d72.7770761!16s%2Fg%2F11rvgf3s8y?entry=ttu&g_ep=EgoyMDI2MTExMC4wIKXMDSoASAFQAw%3D%3D';
 // Sample dishes for the WhatsApp-bill demo (replace with the restaurant's real menu)
 const BILL = { name: 'Rahul', items: ['Veg Dimsum Basket', 'Wonton Soup', 'Mushroom Fried Rice', 'Sushi Platter'] };
